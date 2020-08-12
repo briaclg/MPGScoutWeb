@@ -1,0 +1,50 @@
+<body>
+    <div style="width: 900px; height: 600px;" ej-map>
+        <e-layers>
+            <div e-layer e-shapedata=FRANCEMap  e-enableselection="enableSelectionBig"  >
+                <e-sublayers>
+                    <div e-sublayer 
+                        e-shapedata=FRANCECITYMap e-datasource=datasource e-shapedatapath='name' 
+                        e-shapepropertypath='name' e-enableselection="enableSelection" 
+            
+            
+                        e-bubblesettings-showBubble="true" e-bubblesettings-minValue="6" 
+                        e-bubblesettings-maxValue="40" e-bubblesettings-color="#C99639" 
+                        e-bubblesettings-valuePath="nombre" 
+                        e-bubblesettings-enablemousehover="enableMouseHover"  e-bubblesettings-showtooltip="true"
+            
+        
+                        e-showtooltip="true" e-shapesettings-tooltiptemplate="myTooltip" >
+              
+                        <div e-bubblesettings-colormappings-rangecolormapping>
+                            <e-bubblerangecolormap e-from="0" e-to="8" e-color="ncolor4">
+                            </e-bubblerangecolormap>
+                            <e-bubblerangecolormap e-from="9" e-to="16" e-color="ncolor3">
+                            </e-bubblerangecolormap>
+                            <e-bubblerangecolormap e-from="17" e-to="24" e-color="ncolor2">
+                            </e-bubblerangecolormap>
+                            <e-bubblerangecolormap e-from="25" e-to="40000000" e-color="ncolor1">
+                            </e-bubblerangecolormap>
+                        </div>
+                    </div>
+                </e-sublayers>
+            </div>
+        </e-layers>
+    </div>
+        
+    <div  id="myTooltip" style="display: none;">
+        <div >
+            <div style="height:60px;width:120px;background:#4586a0;border-radius:3px;">
+                <div style="margin-top:-20px;margin-left:9px;padding-top:3px">
+                 <label style="margin-top:-20px;font-weight:normal;font-size:12px;color:white;font-family:Segoe UI;">{{name}}
+                 </label>
+                </div>
+                <div style="height:10px;"></div>
+                <div style="margin-top:-10px;margin-left:9px;">
+                <label style="margin-top:-10px;font-weight:normal;font-size:14px;color:white;font-family:segoe ui light;">{{nombre}}
+                </label>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
